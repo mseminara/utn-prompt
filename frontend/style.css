@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(to bottom, #e8f5e9, #1b5e20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #form-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  
+    /* Estilos para el modal */
+    #modalCodigo {
+        text-align: center; /* Todos los textos centrados */
+    }
+
+    /* Estilos para el texto "S93f39E3O" */
+    #codigoGenerado p:nth-child(3) {
+        background-color: yellow; /* Fondo amarillo */
+        font-size: 24px; /* Tamaño grande */
+    }
+
+    /* Estilos para "Matias Seminara - DNI 25194419" */
+    #codigoGenerado p:nth-child(1) {
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    /* Estilos para la fecha de vencimiento */
+    #codigoGenerado p:nth-child(4) {
+        font-size: 14px; /* Tamaño menor */
+    }
+

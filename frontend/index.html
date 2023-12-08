@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form-container">
+        <h4>¡Conseguí tu descuento!</h4>
+        <form id="formulario">
+        <div class="input-field">
+            <input id="nombre" type="text" class="validate" required maxlength="40">
+            <label for="nombre">Nombre</label>
+        </div>
+        <div class="input-field">
+            <input id="dni" type="text" class="validate" required maxlength="8">
+            <label for="dni">DNI</label>
+            <span class="error-message" style="color: red; display: none;">El documento debe tener 7 u 8 dígitos</span>
+        </div>
+        <div class="input-field">
+            <input id="instagram_user" type="text" class="validate" maxlength="30">
+            <label for="instagram_user">Usuario de Instagram</label>
+        </div>
+        <div class="input-field">
+            <input type="text" class="datepicker" id="fecha_nac" required>
+            <label for="fecha_nac">Fecha de Nacimiento</label>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">GENERAR CÓDIGO</button>
+        </form>
+    </div>
+    <!-- Modal Código Generado -->
+    <div id="modalCodigo" class="modal">
+        <div class="modal-content center-align" id="data-img">
+            <h4 class="blue-text text-darken-2">¡Código generado!</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512" class="blue-text text-darken-2">
+                <path d="M155.6 17.3C163 3 179.9-3.6 195 1.9L320 47.5l125-45.6c15.1-5.5 32 1.1 39.4 15.4l78.8 152.9c28.8 55.8 10.3 122.3-38.5 156.6L556.1 413l41-15c16.6-6 35 2.5 41 19.1s-2.5 35-19.1 41l-71.1 25.9L476.8 510c-16.6 6.1-35-2.5-41-19.1s2.5-35 19.1-41l41-15-31.3-86.2c-59.4 5.2-116.2-34-130-95.2L320 188.8l-14.6 64.7c-13.8 61.3-70.6 100.4-130 95.2l-31.3 86.2 41 15c16.6 6 25.2 24.4 19.1 41s-24.4 25.2-41 19.1L92.2 484.1 21.1 458.2c-16.6-6.1-25.2-24.4-19.1-41s24.4-25.2 41-19.1l41 15 31.3-86.2C66.5 292.5 48.1 226 76.9 170.2L155.6 17.3zm44 54.4l-27.2 52.8L261.6 157l13.1-57.9L199.6 71.7zm240.9 0L365.4 99.1 378.5 157l89.2-32.5L440.5 71.7z"/>
+            </svg>
+            <div class="modal-body" id="codigoGenerado">
+                <!-- Aca va el codigo generado -->
+            </div>
+        </div>
+        <div class="modal-footer center-align">
+            <button id="descargarImagen" class="btn waves-effect waves-light">Descargar Imagen</button>
+        </div>
+    </div>
+
+    <!-- Modal Spinner -->
+    <div id="modalSpinner" class="modal">
+        <div class="modal-content center-align">
+            <div class="preloader-wrapper active">
+                <div class="spinner-layer spinner-green-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-2">Generando código...</p>
+        </div>
+    </div>
+
+    <!-- Modal Error -->
+    <div id="modalError" class="modal">
+        <div class="modal-content">
+            <div class="modal-body center-align">
+                <i class="material-icons red-text text-darken-2" style="font-size: 48px;">warning</i>
+                <p>No fue posible generar el código en este momento.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Error Edad -->
+    <div id="modalErrorEdad" class="modal">
+        <div class="modal-content">
+            <div class="modal-body center-align">
+                <i class="material-icons red-text text-darken-2" style="font-size: 48px;">block</i>
+                <p>Para acceder a esta promoción deberás tener al menos 18 años.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
