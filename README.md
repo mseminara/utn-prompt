@@ -18,10 +18,17 @@ Ejercicio final de prompt con Chat-GPT
      pip install flask
      pip install mysql-connector-python
      ```
+4. **Configuración del backend:**
+   - Abre el archivo cerveceria.py:
+   - Lina 194: codigo = Codigo('localhost', 'root', '', 'cerveceria')
 
 ## Frontend
 
-1. **Ejecución desde Visual Studio Code con Live Server:**
+1. **Ejecución desde Visual Studio Code con Live Server:**   
+   - Abre js/script.js
+   - Linea 85: reemplaza la URL de la linea 85.
+
+2. **Ejecución desde Visual Studio Code con Live Server:**
    - Abre el proyecto en Visual Studio Code.
    - Instala la extensión Live Server si no está instalada.
    - Haz clic con el botón derecho en tu archivo HTML principal y selecciona "Open with Live Server".
