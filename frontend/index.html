@@ -7,23 +7,106 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script type="text/javascript" src="js/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+
+        
+
+        /* 
+            This CSS code defines media queries for different screen widths.
+            It adjusts the width and margin of the #form-container element based on the screen size.
+            - For screens with a minimum width of 1200px, the width is set to 50% and centered horizontally.
+            - For screens with a minimum width of 992px and a maximum width of 1199px, the width is set to 60% and centered horizontally.
+            - For screens with a minimum width of 768px and a maximum width of 991px, the width is set to 80% and centered horizontally.
+            - For screens with a maximum width of 767px, the width is set to 90% and centered horizontally.
+        */
+        @media only screen and (min-width: 1200px) {
+            #form-container {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            #form-container {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            #form-container {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            #form-container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+        }
+
+        /* Estilos para form-container */
+        #form-container {
+            margin-top: 50px;
+
+        }
+
+        /* boton centrado */
+        .btn {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* imagen de fondo cerveceria3.png.  */
+
+        body {
+            background-image: url("imgs/cerveceria3.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-position-y: 0px;
+
+        }
+
+        #form-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(206, 224, 209, 0.712);
+            border-radius: 1vw;
+            padding: 2vw;
+        }
+
+        /* h4 debe estar centrado y la letra debe ser bold */
+        h4 {
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+    </style>
 </head>
 <body>
     <div id="form-container">
         <h4>¡Conseguí tu descuento!</h4>
         <form id="formulario">
         <div class="input-field">
-            <input id="nombre" type="text" class="validate" required maxlength="40">
+            
+            <input id="nombre" type="text" class="validate" required maxlength="40" autocomplete="off">
             <label for="nombre">Nombre</label>
         </div>
         <div class="input-field">
-            <input id="dni" type="text" class="validate" required maxlength="8">
+            <input id="dni" type="text" class="validate" required maxlength="8" autocomplete="off">
             <label for="dni">DNI</label>
             <span class="error-message" style="color: red; display: none;">El documento debe tener 7 u 8 dígitos</span>
         </div>
         <div class="input-field">
-            <input id="instagram_user" type="text" class="validate" maxlength="30">
+            <input id="instagram_user" type="text" class="validate" maxlength="30" autocomplete="off">
             <label for="instagram_user">Usuario de Instagram</label>
         </div>
         <div class="input-field">
